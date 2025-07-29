@@ -8,5 +8,5 @@ sudo oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_stig --resu
 curl -O https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/scc-5.10.2_rhel9_oracle-linux9_x86_64_bundle.zip
 unzip scc-5.10.2_rhel9_oracle-linux8_x86_64_bundle.zip
 sudo rpm -ivh scc-5.10.2_rhel9_x86_64/scc-5.10.2.rhel9.x86_64.rpm
-sudo /opt/scc/cscc
+#sudo /opt/scc/cscc
 sed -i 's/umask 077/umask 022/g' /etc/profile /etc/*rc
