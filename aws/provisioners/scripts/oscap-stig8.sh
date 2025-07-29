@@ -9,3 +9,4 @@ curl -O https://public.cyber.mil/wp-content/uploads/stigs/zip/scc-5.10.2_rhel8_o
 unzip scc-5.10.2_rhel8_oracle-linux8_x86_64_bundle.zip
 sudo rpm -ivh scc-5.10.2_rhel8_x86_64/scc-5.10.2.rhel8.x86_64.rpm
 sudo /opt/scc/cscc
+sed -i 's/umask 077/umask 022/g' /etc/profile /etc/*rc

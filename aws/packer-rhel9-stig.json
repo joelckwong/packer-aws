@@ -2,7 +2,7 @@
     "variables": {
         "aws_access_key": "",
         "aws_secret_key": "",
-        "ami_name": "rhel8-stig-{{isotime \"2006-01-02\"}}-{{timestamp}}",
+        "ami_name": "rhel9-stig-{{isotime \"2006-01-02\"}}-{{timestamp}}",
         "aws_region": "us-east-1",
         "ssh_username": "ec2-user",
         "vpc_id": "",
@@ -23,7 +23,7 @@
         "source_ami_filter": {
             "filters": {
                 "virtualization-type": "hvm",
-                "name": "RHEL-8.10.0_HVM-*-x86_64-*-Hourly2-GP3",
+                "name": "RHEL-9.6.0_HVM-*-x86_64-*-Hourly2-GP3",
                 "root-device-type": "ebs"
             },
             "owners": ["309956199498"],
@@ -55,7 +55,7 @@
         },
 	{
             "type": "shell",
-            "script": "./provisioners/scripts/oscap-stig8.sh",
+            "script": "./provisioners/scripts/oscap-stig9.sh",
             "valid_exit_codes": [ 0, 1, 2 ]
         },
         {
